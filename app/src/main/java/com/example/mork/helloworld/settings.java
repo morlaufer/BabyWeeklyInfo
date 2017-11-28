@@ -13,10 +13,10 @@ import android.widget.Toast;
 public class settings extends AppCompatActivity {
 
 
-    String baby_name = "";
-    String baby_date = "";
-    String baby_gender = "";
-    Button submit;
+    private String baby_name = "";
+    private String baby_date = "";
+    private String baby_gender = "";
+
 
     EditText name,dateOfBirth,gender;
 
@@ -30,7 +30,8 @@ public class settings extends AppCompatActivity {
         name= (EditText) findViewById(R.id.nameEditText);
         dateOfBirth = (EditText) findViewById(R.id.dateEditText);
         gender = (EditText) findViewById(R.id.genderEditText);
-
+        Button submit = (Button)findViewById(R.id.submitButton);
+        Log.d("Comments", "Entered  settings activity2222");
         name.setHint("Baby name");
         dateOfBirth.setHint("Date of Birth");
         gender.setHint("Gender");
@@ -38,6 +39,7 @@ public class settings extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast msg;
                 if (name.getText().toString().isEmpty() || dateOfBirth.getText().toString().isEmpty() || gender.getText().toString().isEmpty() ) {
                     Toast.makeText(getApplicationContext(), "Enter the Data", Toast.LENGTH_SHORT).show();
                 } else {
