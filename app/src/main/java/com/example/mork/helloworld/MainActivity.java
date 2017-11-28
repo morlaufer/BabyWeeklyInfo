@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import static com.example.mork.helloworld.utilities.Constants.PREFS_NAME;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onStart(){
         super.onStart();
-        final String PREFS_NAME = "MyPrefsFile";
 
         int TIME_OUT = 4000;
         Log.d("Comments", "onStart");
@@ -40,9 +41,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(i);
                     finish();
 
-                }
-                else
-                {
+                } else {
                     Log.d("Comments", "not First time");
                     Intent i = new Intent(MainActivity.this, Options.class);
                     startActivity(i);

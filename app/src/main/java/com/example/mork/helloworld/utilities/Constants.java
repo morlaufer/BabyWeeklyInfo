@@ -5,5 +5,5 @@ package com.example.mork.helloworld.utilities;
  */
 
 public final class Constants {
-    public static final String PREFS_NAME = "myPrefsName";
+    public static final String PREFS_NAME = "MyPrefsName";
 }
