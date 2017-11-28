@@ -1,4 +1,4 @@
-package com.babyweekinfo.activities;
+package com.example.mork.helloworld;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -6,8 +6,6 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-
-import com.example.mork.babyweekinfo.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                     // record the fact that the app has been started at least once
                     settings.edit().putBoolean("first_boot", false).commit();
 
-                    Intent i = new Intent(MainActivity.this, com.babyweekinfo.activities.settings.class);
+                    Intent i = new Intent(MainActivity.this, settings.class);
                     startActivity(i);
                     finish();
 

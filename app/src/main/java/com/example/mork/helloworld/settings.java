@@ -1,14 +1,14 @@
-package com.babyweekinfo.activities;
+package com.example.mork.helloworld;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.mork.babyweekinfo.R;
 
 public class settings extends AppCompatActivity {
 

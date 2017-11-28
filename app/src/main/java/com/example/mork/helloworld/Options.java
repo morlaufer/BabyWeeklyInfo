@@ -1,10 +1,8 @@
-package com.babyweekinfo.activities;
+package com.example.mork.helloworld;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-
-import com.example.mork.babyweekinfo.R;
 
 public class Options extends AppCompatActivity {
 
