@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-                if (settings.getBoolean("first_boot", true)) {
+               // if (settings.getBoolean("first_boot", true)) {
                     //the app is being launched for first time, do something
                     Log.d("Comments", "First time");
                     // first time task
@@ -41,15 +41,15 @@ public class MainActivity extends AppCompatActivity {
                     finish();
 
                 }
-                else
-                {
-                    Log.d("Comments", "not First time");
-                    Intent i = new Intent(MainActivity.this, Options.class);
-                    startActivity(i);
-                    finish();
-                }
+//                else
+//                {
+//                    Log.d("Comments", "not First time");
+//                    Intent i = new Intent(MainActivity.this, Options.class);
+//                    startActivity(i);
+//                    finish();
+//                }
 
-            }
+//            }
         }, TIME_OUT);
 
 

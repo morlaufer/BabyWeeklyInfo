@@ -1,46 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.mork.helloworld.settings"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="5dp"
-    android:paddingLeft="5dp"
-    android:paddingRight="5dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
     android:paddingTop="5dp">
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#191970"
+        android:text="Sign up my Baby"/>
+
     <EditText
         android:id="@+id/nameEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="24dp"
+        android:textColor="#ff6a80"
+        android:fontFamily="casual"
+        android:layout_below="@+id/text1"
         android:ems="10"
         />
-    <EditText
-        android:id="@+id/genderEditText"
+    <TextView
+        android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/nameEditText"
-        android:layout_marginTop="19dp"
-        />
-    <EditText
-        android:id="@+id/dateEditText"
+        android:textColor="#8f83d8"
+        android:fontFamily="casual"
+        android:paddingTop="5dp"
+        android:text="Baby Gender"/>
+    <RadioGroup
+        android:id="@+id/radioGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/genderEditText"
-        android:layout_marginTop="12dp"
-        android:inputType="text|date"
-        />
+        android:paddingTop="5dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/text2">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:fontFamily="casual"
+            android:layout_height="wrap_content"
+            android:textColor="#191970"
+            android:text="male"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff6a80"
+            android:fontFamily="casual"
+            android:text="female" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnChangeDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#8f83d8"
+        android:layout_below="@+id/radioGender"
+        android:paddingTop="5dp"
+        android:fontFamily="casual"
+        android:text="Date of Birth" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:datePickerMode="spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnChangeDate">
+    </DatePicker>
 
     <Button
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dateEditText"
-        android:text="submit" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_below="@+id/datePicker"
+        android:paddingTop="5dp"
+        android:textColor="#ff6a80"
+        android:background="#191970"
+        android:text="Go baby!" />
+</RelativeLayout>
