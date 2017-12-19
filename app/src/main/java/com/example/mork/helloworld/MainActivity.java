@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onStart(){
         super.onStart();
-        final String PREFS_NAME = "MyPrefsFile";
+        //final String PREFS_NAME = "MyPrefsFile";
 
         int TIME_OUT = 4000;
         Log.d("Comments", "onStart");
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                SharedPreferences settings = getSharedPreferences(getResources().getString(R.string.PREFS_NAME), 0);
                // if (settings.getBoolean("first_boot", true)) {
                     //the app is being launched for first time, do something
                     Log.d("Comments", "First time");

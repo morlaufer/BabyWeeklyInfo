@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Baby Week Info</string>
+    <string name="PREFS_NAME">prefsName</string>
 </resources>
